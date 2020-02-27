@@ -9,6 +9,9 @@ var (
 	bb = true
 )
 
+// 也可以这样定义
+var cc, dd, ee = 3, "kkk", true
+
 func variableZeroValue() {
 	var a int
 	var b int
