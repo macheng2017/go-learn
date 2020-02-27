@@ -3,9 +3,11 @@ package main
 import "fmt"
 
 // 这里定义的变量不能使用:= 这里作用域是包内部的 go语言没有全局变量
-var aa = 3
-var ss = "kkk"
-var bb = true
+var (
+	aa = 3
+	ss = "kkk"
+	bb = true
+)
 
 func variableZeroValue() {
 	var a int
@@ -44,4 +46,5 @@ func main() {
 	variableInitialValue()
 	variableTypeDeduction()
 	variableShorter()
+	fmt.Println(aa, bb, ss)
 }
