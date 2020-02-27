@@ -25,9 +25,17 @@ func variableTypeDeduction() {
 } // go 语言中的类型自动推断(type deduction)
 // 3 4 true def
 
+func variableShorter() {
+	a, b, c, d := 3, 4, true, "def"
+	// 第一次定义变量可以使用 :=
+	b = 5
+	fmt.Println(a, b, c, d)
+}
+
 func main() {
 	fmt.Print("hello world\n")
 	variableZeroValue()
 	variableInitialValue()
 	variableTypeDeduction()
+	variableShorter()
 }
