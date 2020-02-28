@@ -55,6 +55,12 @@ func euler() {
 	fmt.Printf("%.3f", c)
 } // (0.000+0.000i)
 // 实部是0 虚部接近0 原因是浮点数的不精确造成的 complex64 实部是float32 虚部也是float32
+// 在go中只有强制类型转换(显式转换)
+func triangle() {
+	var a, b int = 3, 4
+	var c int
+	c = math.Sqrt(a*a, b*b)
+}
 
 func main() {
 	fmt.Print("hello world\n")
