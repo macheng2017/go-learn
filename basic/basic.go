@@ -59,8 +59,11 @@ func euler() {
 func triangle() {
 	var a, b int = 3, 4
 	var c int
-	c = math.Sqrt(a*a, b*b)
-}
+	c = int(math.Sqrt(float64(a*a + b*b)))
+	fmt.Printf("%d", c)
+} // 5
+// 现在的问题是,使用float会出现精度不够问题,即本来是一个整数,会出现小于这个整数的情况
+// 如何处理这类问题?
 
 func main() {
 	fmt.Print("hello world\n")
@@ -70,4 +73,5 @@ func main() {
 	variableShorter()
 	fmt.Println(aa, bb, ss)
 	euler()
+	triangle()
 }
