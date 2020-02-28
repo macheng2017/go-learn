@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 	"math/cmplx"
 )
 
@@ -48,9 +49,10 @@ func variableShorter() {
 
 // 复数
 func euler() {
-	c := 3 + 4i
-	fmt.Println(cmplx.Abs(c))
-} // 5
+	// 验证欧拉公式
+	c := cmplx.Pow(math.E, 1i*math.Pi) + 1
+	fmt.Println(c)
+} // (0+1.2246467991473515e-16i)
 
 func main() {
 	fmt.Print("hello world\n")
