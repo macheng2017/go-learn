@@ -84,13 +84,13 @@ func floatPrecision() {
 // 枚举类型直接定义为const即可
 func enums() {
 	const (
-		cpp    = 0
-		java   = 1
-		python = 2
-		golang = 3
+		cpp = iota
+		java
+		python
+		golang
 	)
 	fmt.Println(cpp, java, python, golang)
-}
+} // 0 1 2 3
 
 func main() {
 	fmt.Print("hello world\n")
