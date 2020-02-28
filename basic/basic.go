@@ -60,10 +60,26 @@ func triangle() {
 	var a, b int = 3, 4
 	var c int
 	c = int(math.Sqrt(float64(a*a + b*b)))
-	fmt.Printf("%d", c)
+	fmt.Printf("%d\n", c)
 } // 5
 // 现在的问题是,使用float会出现精度不够问题,即本来是一个整数,会出现小于这个整数的情况
 // 如何处理这类问题?
+
+func consts() {
+	// 很奇怪这里使用const常量之后,sqrt()中参数a,b不用强制转换?
+	// 这里a,b定义为常量之后类似文本替换,既可以做int也可以做float,所以不用强转
+	const a, b = 3, 4
+	const filename = "abc.txt"
+	var c int
+	c = int(math.Sqrt(a*a + b*b))
+	fmt.Println(c)
+}
+
+func floatPrecision() {
+	var a float32 = 135.90
+	var c float32 = a * 100
+	fmt.Println(c)
+}
 
 func main() {
 	fmt.Print("hello world\n")
@@ -74,4 +90,6 @@ func main() {
 	fmt.Println(aa, bb, ss)
 	euler()
 	triangle()
+	floatPrecision()
+	consts()
 }
