@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"math"
 	"math/cmplx"
+	"runtime"
 )
 
 // 这里定义的变量不能使用:= 这里作用域是包内部的 go语言没有全局变量
@@ -93,6 +94,7 @@ func enums() {
 	// iota 可以作为自增值的一个种子
 	//b kb mb gb tb pb
 	const (
+		// 1 左移 10 * iota 位
 		b = 1 << (10 * iota)
 		kb
 		mb
@@ -118,4 +120,5 @@ func main() {
 	floatPrecision()
 	consts()
 	enums()
+	fmt.Println(runtime.GOARCH)
 }
