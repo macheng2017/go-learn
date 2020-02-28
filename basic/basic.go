@@ -50,9 +50,11 @@ func variableShorter() {
 // 复数
 func euler() {
 	// 验证欧拉公式
-	c := cmplx.Pow(math.E, 1i*math.Pi) + 1
+	//c := cmplx.Pow(math.E, 1i*math.Pi) + 1
+	c := cmplx.Exp(1i*math.Pi) + 1
 	fmt.Println(c)
 } // (0+1.2246467991473515e-16i)
+// 实部是0 虚部接近0 原因是浮点数的不精确造成的 complex64 实部是float32 虚部也是float32
 
 func main() {
 	fmt.Print("hello world\n")
