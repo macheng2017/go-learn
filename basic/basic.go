@@ -81,6 +81,17 @@ func floatPrecision() {
 	fmt.Println(c)
 }
 
+// 枚举类型直接定义为const即可
+func enums() {
+	const (
+		cpp    = 0
+		java   = 1
+		python = 2
+		golang = 3
+	)
+	fmt.Println(cpp, java, python, golang)
+}
+
 func main() {
 	fmt.Print("hello world\n")
 	variableZeroValue()
@@ -92,4 +103,5 @@ func main() {
 	triangle()
 	floatPrecision()
 	consts()
+	enums()
 }
