@@ -85,12 +85,26 @@ func floatPrecision() {
 func enums() {
 	const (
 		cpp = iota
-		java
+		_
 		python
 		golang
+		JavaScript
 	)
-	fmt.Println(cpp, java, python, golang)
+	// iota 可以作为自增值的一个种子
+	//b kb mb gb tb pb
+	const (
+		b = 1 << (10 * iota)
+		kb
+		mb
+		gb
+		tb
+		pb
+	)
+
+	fmt.Println(cpp, JavaScript, python, golang)
+	fmt.Println(b, kb, mb, gb, tb, pb)
 } // 0 1 2 3
+// 1 1024 1048576 1073741824 1099511627776 1125899906842624
 
 func main() {
 	fmt.Print("hello world\n")
