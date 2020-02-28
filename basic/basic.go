@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/cmplx"
+)
 
 // 这里定义的变量不能使用:= 这里作用域是包内部的 go语言没有全局变量
 var (
@@ -43,6 +46,12 @@ func variableShorter() {
 	fmt.Println(a, b, c, d)
 }
 
+// 复数
+func euler() {
+	c := 3 + 4i
+	fmt.Println(cmplx.Abs(c))
+} // 5
+
 func main() {
 	fmt.Print("hello world\n")
 	variableZeroValue()
@@ -50,4 +59,5 @@ func main() {
 	variableTypeDeduction()
 	variableShorter()
 	fmt.Println(aa, bb, ss)
+	euler()
 }
